@@ -19,7 +19,7 @@ export default function Links() {
 			</a>
 			<a
 				href={resume}
-				download={"braden_zingler_resume.pdf"}
+                rel="noopener noreferrer"
 				title="Braden Zingler's Resume"
 			>
 				<IoDocumentTextOutline size={iconSize} />
