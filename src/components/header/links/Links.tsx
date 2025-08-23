@@ -5,7 +5,7 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 export default function Links() {
 	const linkedIn = "https://www.linkedin.com/in/braden-zingler-2a3844228/";
 	const github = "https://github.com/bradenzingler";
-	const resume = "/resume.pdf";
+	const resume = "/braden_zingler_resume.pdf";
 	const iconSize = 35;
 
 	return (
@@ -16,7 +16,11 @@ export default function Links() {
 			<a href={github} title="Braden Zingler's Github Account">
 				<FaGithubSquare id="github" size={iconSize} />
 			</a>
-			<a href={resume} download={true} title="Braden Zingler's Resume">
+			<a
+				href={resume}
+				download={"braden_zingler_resume.pdf"}
+				title="Braden Zingler's Resume"
+			>
 				<IoDocumentTextOutline size={iconSize} />
 			</a>
 		</div>
