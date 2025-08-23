@@ -4,8 +4,8 @@ import Links from "./links/Links";
 export default function Header() {
 	return (
 		<header>
-			<img data-ant-block id="portrait" src="/portrait.webp"></img>
-			<div data-ant-block id="info">
+			<img id="portrait" src="/portrait.webp"></img>
+			<div id="info">
 				<h1>Braden Zingler</h1>
 				<h2>Software & Computer Engineer</h2>
 				<h3>Chicago | Seattle</h3>

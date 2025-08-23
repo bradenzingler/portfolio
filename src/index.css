@@ -17,7 +17,7 @@
 	--md-space: 1rem;
 	--lg-space: 2rem;
 
-	--sm-font: 1rem;
+	--sm-font: 1.1rem;
 	--md-font: 1.25rem;
 
 	--border-radius: 5px;
@@ -110,3 +110,41 @@ p {
 	color: var(--error-color);
 	border-color: var(--error-color);
 }
+
+/****** Media Queries *****/
+
+/** smaller phones */
+@media only screen and (min-width: 320px) {
+}
+
+/** small devices and most phones */
+@media only screen and (min-width: 480px) {
+}
+
+/** most tablets */
+@media only screen and (min-width: 768px) {
+}
+
+/** smaller desktops */
+@media only screen and (min-width: 992px) {
+    #about-me {
+        width: 75%;
+    }
+    hr {
+        display: none;
+    }
+	h1 {
+		font-size: 5rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.2rem;
+	}
+}
+
+/** large devices and wide screens */
+@media only screen and (min-width: 1200px) {
+}
+
