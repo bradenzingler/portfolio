@@ -8,6 +8,7 @@
 	--primary-color: #fbf8ea;
 	--secondary-color: #2f2b24;
 	--secondary-color-light: #c0b197;
+	--error-color: #ae3f3f;
 
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
@@ -16,32 +17,47 @@
 	--md-space: 1rem;
 	--lg-space: 2rem;
 
-    --sm-font: 1rem;
+	--sm-font: 1rem;
 	--md-font: 1.25rem;
 
 	--border-radius: 5px;
 }
 
 label {
-	font-size: var(--md-font);
+	font-size: var(--sm-font);
+    text-align: left;
 }
 
 input {
-    font-family: inherit;
-    font-size: var(--sm-font);
+	font-family: inherit;
+	font-size: var(--sm-font);
 	padding: var(--sm-space);
 	border-radius: var(--border-radius);
 	background-color: inherit;
 	border: 1px solid var(--secondary-color-light);
-    outline: none;
-    &:focus {
-        border: 1px solid var(--secondary-color);
-    }
+	outline: none;
+	&:focus {
+		border: 1px solid var(--secondary-color);
+	}
+}
+
+input[type="submit"],
+button {
+	cursor: pointer;
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+	border: none;
+	outline: none;
+	font-size: var(--md-font);
+	&:hover {
+		filter: brightness(1.5);
+	}
 }
 
 form {
 	display: flex;
 	flex-direction: column;
+    text-align: center;
 	width: 100%;
 	gap: var(--md-space);
 
@@ -68,7 +84,7 @@ h3 {
 	font-weight: normal;
 }
 p {
-	font-size: var(--md-font);
+	font-size: var(--sm-font);
 }
 .gap-lg {
 	gap: var(--lg-space);
@@ -85,4 +101,9 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.error {
+	color: var(--error-color);
+	border-color: var(--error-color);
 }
