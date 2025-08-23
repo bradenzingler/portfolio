@@ -9,6 +9,17 @@ body {
 	padding: 0;
 }
 
+h1 {
+	font-size: 3rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h3 {
+	font-size: 1rem;
+	font-weight: normal;
+}
+
 /****** Class Selectors *****/
 .main {
 	display: flex;
@@ -17,13 +28,13 @@ body {
 	justify-content: center;
 	margin-inline: 2%;
 	height: 100dvh;
-    gap: 1rem;
+	gap: 1rem;
 
 	/** smaller desktops and up */
 	@media only screen and (min-width: 992px) {
 		margin-inline: 16.5%;
-        flex-direction: row;
-        gap: 0;
+		flex-direction: row;
+		gap: 0;
 	}
 }
 
@@ -43,6 +54,15 @@ body {
 
 /** smaller desktops */
 @media only screen and (min-width: 992px) {
+	h1 {
+		font-size: 5rem;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	h3 {
+		font-size: 1.2rem;
+	}
 }
 
 /** large devices and wide screens */
