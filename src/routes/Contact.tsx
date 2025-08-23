@@ -4,9 +4,12 @@ export default function Contact() {
 	return (
 		<main className="main">
 			<div className="gap-lg col">
-				<h1>Let&apos;s get in touch</h1>
-				<p>Fill out the form below to send me a message.</p>
+				<h1>Let&apos;s chat</h1>
+				<p>Fill out the form below to send me a message. Please include your contact information.</p>
 				<ContactForm />
+				<a href="/" title="Return to home page">
+					Return to home
+				</a>
 			</div>
 		</main>
 	);

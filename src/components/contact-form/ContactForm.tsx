@@ -1,11 +1,22 @@
 import { useRef, useState, type FormEvent } from "react";
 import TextInput from "./TextInput";
 import { sendMessage } from "../../utils/utils";
+import { SUCCESS_MESSAGE_TIMEOUT } from "../../utils/constants";
 
 export default function ContactForm() {
 	const subjectRef = useRef<HTMLInputElement>(null);
 	const messageRef = useRef<HTMLInputElement>(null);
 	const [error, setError] = useState("");
+	const [isSending, setIsSending] = useState(false);
+	const [justSent, setJustSent] = useState(false);
+
+	const clearMessage = () => {
+		if (!subjectRef.current) return;
+		if (!messageRef.current) return;
+
+		subjectRef.current.value = "";
+		messageRef.current.value = "";
+	};
 
 	const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -35,11 +46,27 @@ export default function ContactForm() {
 			setError("You must provide a message!");
 		}
 
-		console.log(subject, message);
-        await sendMessage(subject, message);
+		setIsSending(true);
+		const successful = await sendMessage(subject, message);
+		setIsSending(false);
+		setJustSent(true);
+
+		if (!successful) {
+			setError(
+				"An error occurred while sending the message. Please try again."
+			);
+		}
+		clearMessage();
+		setTimeout(() => setJustSent(false), SUCCESS_MESSAGE_TIMEOUT);
 	};
 
 	const onFormChange = () => setError("");
+
+	const sendButtonText = isSending
+		? "Sending..."
+		: justSent
+		? "Sent!"
+		: "Send";
 
 	return (
 		<form onChange={onFormChange} onSubmit={onSubmit}>
@@ -58,7 +85,11 @@ export default function ContactForm() {
 
 			{error && <p className="error">{error}</p>}
 
-			<input type="submit" value="Send"></input>
+			<input
+				disabled={isSending}
+				type="submit"
+				value={sendButtonText}
+			></input>
 		</form>
 	);
 }
