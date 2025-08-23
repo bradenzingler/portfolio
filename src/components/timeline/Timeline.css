@@ -1,0 +1,10 @@
+#timeline {
+    width: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    font-size: 1.2rem;
+}

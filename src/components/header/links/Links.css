@@ -1,0 +1,19 @@
+#links {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+
+a {
+	all: unset;
+	cursor: pointer;
+}
+
+#linkedin {
+    color: blue;
+}
+
+#linkedin:hover, a:hover {
+    transform: scale(1.05);
+    transition: transform 150ms;
+}
