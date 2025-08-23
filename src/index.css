@@ -50,6 +50,7 @@ button {
 	color: var(--primary-color);
 	border: none;
 	outline: none;
+    padding: 0.5rem 0;
 	font-size: var(--md-font);
 	&:hover {
 		filter: brightness(1.5);

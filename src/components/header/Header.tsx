@@ -2,9 +2,10 @@ import "./Header.css";
 import Links from "./links/Links";
 
 export default function Header() {
+
 	return (
 		<header>
-			<img id="portrait" src="/portrait.webp"></img>
+			<img id="portrait" src="/portrait.webp" />
 			<div id="info">
 				<h1>Braden Zingler</h1>
 				<h2>Software & Computer Engineer</h2>
