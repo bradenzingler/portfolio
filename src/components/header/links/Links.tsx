@@ -11,20 +11,20 @@ export default function Links() {
 
 	return (
 		<div id="links">
-			<a href={linkedIn} title="Braden Zingler's LinkedIn Account">
+			<a data-ant-block href={linkedIn} title="Braden Zingler's LinkedIn Account">
 				<FaLinkedin id="linkedin" size={iconSize} />
 			</a>
-			<a href={github} title="Braden Zingler's Github Account">
+			<a data-ant-block href={github} title="Braden Zingler's Github Account">
 				<FaGithubSquare id="github" size={iconSize} />
 			</a>
-			<a
+			<a data-ant-block
 				href={resume}
                 rel="noopener noreferrer"
 				title="Braden Zingler's Resume"
 			>
 				<IoDocumentTextOutline size={iconSize} />
 			</a>
-			<a href="/contact" title="Contact me">
+			<a data-ant-block href="/contact" title="Contact me">
 				<AiTwotoneMessage size={iconSize} />
 			</a>
 		</div>

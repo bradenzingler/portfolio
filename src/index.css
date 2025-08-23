@@ -1,5 +1,5 @@
 :root {
-	font-family: "Times New Roman", Times, serif;
+	font-family: "Fredoka", sans-serif;
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -28,7 +28,8 @@ label {
 	text-align: left;
 }
 
-input, textarea {
+input,
+textarea {
 	font-family: inherit;
 	font-size: var(--sm-font);
 	padding: var(--sm-space);
@@ -36,7 +37,7 @@ input, textarea {
 	background-color: inherit;
 	border: 1px solid var(--secondary-color-light);
 	outline: none;
-    resize: none;
+	resize: none;
 	&:focus {
 		border: 1px solid var(--secondary-color);
 	}
@@ -102,7 +103,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    text-align: center;
+	text-align: center;
 }
 
 .error {

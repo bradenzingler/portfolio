@@ -6,7 +6,7 @@ export default function App() {
 	return (
 		<main className="main">
 			<Header />
-            <AboutMe />
+			<AboutMe />
 		</main>
 	);
 }
