@@ -15,11 +15,8 @@ header {
 }
 
 #portrait {
-	background-image: url("./src/assets/portrait.jpg");
 	border-radius: 60px;
-	width: 120px;
 	height: 120px;
-	background-size: cover;
 }
 
 #info {
