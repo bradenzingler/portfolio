@@ -3,25 +3,26 @@ import type { ChangeEvent, Ref } from "react";
 type props = {
 	id: string;
 	label: string;
+    rows: number;
 	placeholder: string;
-	ref: Ref<HTMLInputElement>;
+	ref: Ref<HTMLTextAreaElement>;
 };
 
-export default function TextInput({ id, label, placeholder, ref }: props) {
+export default function TextInput({ id, label, placeholder, ref, rows }: props) {
 	const removeError = (e: ChangeEvent) => e.target.classList.remove("error");
 
 	return (
 		<div>
 			<label htmlFor={id}>{label}</label>
-			<input
+			<textarea
 				ref={ref}
 				autoCapitalize="off"
 				autoComplete="off"
+                rows={rows}
 				id={id}
-				type="text"
 				placeholder={placeholder}
 				onChange={removeError}
-			></input>
+			></textarea>
 		</div>
 	);
 }

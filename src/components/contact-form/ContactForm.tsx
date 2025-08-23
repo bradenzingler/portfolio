@@ -4,8 +4,8 @@ import { sendMessage } from "../../utils/utils";
 import { SUCCESS_MESSAGE_TIMEOUT } from "../../utils/constants";
 
 export default function ContactForm() {
-	const subjectRef = useRef<HTMLInputElement>(null);
-	const messageRef = useRef<HTMLInputElement>(null);
+	const subjectRef = useRef<HTMLTextAreaElement>(null);
+	const messageRef = useRef<HTMLTextAreaElement>(null);
 	const [error, setError] = useState("");
 	const [isSending, setIsSending] = useState(false);
 	const [justSent, setJustSent] = useState(false);
@@ -72,12 +72,14 @@ export default function ContactForm() {
 		<form onChange={onFormChange} onSubmit={onSubmit}>
 			<TextInput
 				ref={subjectRef}
+                rows={1}
 				id="subject"
 				label="Subject"
 				placeholder="Message subject"
 			/>
 			<TextInput
 				ref={messageRef}
+                rows={5}
 				id="message"
 				label="Body"
 				placeholder="Message body"
