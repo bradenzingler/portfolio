@@ -9,7 +9,9 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v2
-            - name: Deploy to server
+            - name: Deploy to Cloudflare Workers
+              env:
+                  CLOUDFLARE_API_KEY: ${{ secrets.CLOUDFLARE_API_KEY }}
               run: |
                   npm install
                   npm run deploy
