@@ -169,6 +169,9 @@ p {
 
 /** most tablets */
 @media only screen and (min-width: 768px) {
+    #about-me {
+        width: 60%;
+    }
 }
 
 /** smaller desktops */
