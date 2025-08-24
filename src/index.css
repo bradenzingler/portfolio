@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "Fredoka";
+	font-style: normal;
+	font-weight: 300 700;
+	font-stretch: 100%;
+	font-display: swap;
+	src: url("font.woff2") format("woff2");
+}
+
 :root {
 	font-family: "Fredoka", sans-serif;
 	font-synthesis: none;
@@ -50,7 +59,7 @@ button {
 	color: var(--primary-color);
 	border: none;
 	outline: none;
-    padding: 0.5rem 0;
+	padding: 0.5rem 0;
 	font-size: var(--md-font);
 	&:hover {
 		filter: brightness(1.5);
@@ -128,12 +137,12 @@ p {
 
 /** smaller desktops */
 @media only screen and (min-width: 992px) {
-    #about-me {
-        width: 75%;
-    }
-    hr {
-        display: none;
-    }
+	#about-me {
+		width: 75%;
+	}
+	hr {
+		display: none;
+	}
 	h1 {
 		font-size: 5rem;
 	}
@@ -148,4 +157,3 @@ p {
 /** large devices and wide screens */
 @media only screen and (min-width: 1200px) {
 }
-
