@@ -7,7 +7,7 @@ projects, and more.
 
 The website is deployed using Cloudflare Workers [here](https://bgzingler.dev).
 
-Run `npm run deploy` to make an update to the site.
+Run `npm run deploy` to make an update to the site. 
 
 ## Google Analytics
 
