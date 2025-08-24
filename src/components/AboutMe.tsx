@@ -5,7 +5,7 @@ export default function AboutMe() {
 			<hr />
 			<p>
 				Computer and software engineer with 2+ years of experience
-				architecting and developing scalable serverless systems in AWS,
+				architecting and developing scalable serverless systems in the cloud,
 				optimizing CI/CD pipelines, and deploying infrastructure with
 				Terraform. Proven ability to reduce costs, improve performance,
 				and deliver reliable end-to-end systems. Interested in cloud

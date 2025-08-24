@@ -1,10 +1,9 @@
-import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Header from "./components/header/Header";
 
 export default function App() {
 	return (
-		<main className="main">
+		<main className="two-cols">
 			<Header />
 			<AboutMe />
 		</main>
