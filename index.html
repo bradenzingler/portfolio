@@ -64,6 +64,8 @@
 			src="https://www.googletagmanager.com/gtag/js?id=G-6HFQQSGC8X"
 		></script>
 		<script>
+            const pageStartTime = Date.now();
+
 			window.dataLayer = window.dataLayer || [];
 			if (!window.location.origin.includes("localhost")) {
 				function gtag() {
@@ -75,6 +77,14 @@
 					page_path:
 						window.location.pathname + window.location.search,
 				});
+                
+                window.addEventListener("beforeunload", () => {
+                    const duration = Math.round((Date.now() - pageStartTime) / 1000);
+                    gtag("event", "session_duration", {
+                        event_category: "engagement",
+                        value: duration
+                    })
+                })
 			}
 		</script>
 	</head>
