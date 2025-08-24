@@ -10,10 +10,21 @@ a {
 }
 
 #linkedin {
-    color: blue;
+	color: blue;
 }
 
-#linkedin:hover, a:hover {
-    transform: scale(1.05);
-    transition: transform 150ms;
+#linkedin:hover,
+a:hover {
+	transform: scale(1.05);
+	transition: transform 150ms;
+}
+
+@media (pointer: coarse) {
+	a,
+	button,
+	input,
+	label {
+		-webkit-tap-highlight-color: transparent;
+		tap-highlight-color: transparent;
+	}
 }
