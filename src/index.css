@@ -4,7 +4,7 @@
 	font-weight: 300 700;
 	font-stretch: 100%;
 	font-display: swap;
-	src: url("font.woff2") format("woff2");
+	src: url("/font.woff2") format("woff2");
 }
 
 :root {
