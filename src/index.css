@@ -70,6 +70,14 @@ button {
 		filter: brightness(1.5);
 	}
 }
+a {
+	all: unset;
+	cursor: pointer;
+	transition: transform 150ms;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
 
 form {
 	display: flex;
@@ -125,6 +133,10 @@ p {
 	gap: 1rem;
 	margin-inline: 2%;
 }
+.row {
+	display: flex;
+	align-items: center;
+}
 
 .error {
 	color: var(--error-color);
@@ -132,6 +144,17 @@ p {
 }
 
 /****** Media Queries *****/
+
+/* On mobile, disable tap highlight color or gray boxes appear on tapped links */
+@media (pointer: coarse) {
+	a,
+	button,
+	input,
+	label {
+		-webkit-tap-highlight-color: transparent;
+		tap-highlight-color: transparent;
+	}
+}
 
 /** smaller phones */
 @media only screen and (min-width: 320px) {

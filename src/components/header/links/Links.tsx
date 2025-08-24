@@ -1,5 +1,4 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import "./Links.css";
 import { IoDocumentTextOutline } from "react-icons/io5";
 import { AiTwotoneMessage } from "react-icons/ai";
 
@@ -10,18 +9,14 @@ export default function Links() {
 	const iconSize = 35;
 
 	return (
-		<div id="links">
+		<div className="row gap-sm">
 			<a href={linkedIn} title="LinkedIn">
-				<FaLinkedin id="linkedin" size={iconSize} />
+				<FaLinkedin color="blue" size={iconSize} />
 			</a>
 			<a href={github} title="Github">
-				<FaGithubSquare id="github" size={iconSize} />
+				<FaGithubSquare size={iconSize} />
 			</a>
-			<a
-				href={resume}
-				rel="noopener noreferrer"
-				title="Resume"
-			>
+			<a href={resume} rel="noopener noreferrer" title="Resume">
 				<IoDocumentTextOutline size={iconSize} />
 			</a>
 			<a href="/contact" title="Contact Me">
