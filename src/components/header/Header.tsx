@@ -1,5 +1,5 @@
 import "./Header.css";
-import Links from "./links/Links";
+import Links from "./Links";
 
 export default function Header() {
 
