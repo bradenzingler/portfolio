@@ -33,13 +33,11 @@ export const handleContact = async (request: Request) => {
 
 	const { message, subject } = body;
 
-	// @ts-expect-error env does not work with typescript
+	// @ts-expect-error TODO - env does not work with typescript
 	const token = env.PUSHOVER_API_KEY;
 	const user = "uc9kcoe3w8anf59acbt65abwie7jfd";
 
-	const fullMessage = `From ${request.cf?.city}, ${request.cf?.region}: ${message}`;
-
-	const url = `${BASE_URL}?token=${token}&user=${user}&timestamp=${Date.now()}&title=${subject}&message=${fullMessage}`;
+	const url = `${BASE_URL}?token=${token}&user=${user}&timestamp=${Date.now()}&title=${subject}&message=${message}`;
 
 	const response = await fetch(url, { method: "POST" });
 	const responseData = await response.json();
