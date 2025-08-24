@@ -14,7 +14,12 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
             - name: Deploy
-              uses: cloudflare/wrangler-action@v3   # https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/#github-actions
+              uses: cloudflare/wrangler-action@v3 # https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/#github-actions
+              env:
+                  PUSHOVER_API_KEY: ${{ secrets.PUSHOVER_API_KEY }}
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
                   accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                  wranglerVersion: "4.32.0"
+                  secrets: |
+                      PUSHOVER_API_KEY
