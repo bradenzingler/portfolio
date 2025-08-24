@@ -16,7 +16,6 @@ export default function TextInput({ id, label, placeholder, ref, rows }: props) 
 			<label htmlFor={id}>{label}</label>
 			<textarea
 				ref={ref}
-				autoCapitalize="off"
 				autoComplete="off"
                 rows={rows}
 				id={id}

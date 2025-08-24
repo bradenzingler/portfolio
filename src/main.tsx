@@ -20,6 +20,7 @@ const root = createRoot(document.getElementById("root")!);
 
 const currentPath = window.location.pathname;
 const route = routes.find((r) => r.path === currentPath);
+
 const Component = route ? route.component : NotFound;
 
 root.render(

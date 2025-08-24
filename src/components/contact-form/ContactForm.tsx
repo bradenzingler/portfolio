@@ -10,6 +10,12 @@ export default function ContactForm() {
 	const [isSending, setIsSending] = useState(false);
 	const [justSent, setJustSent] = useState(false);
 
+	const onFormStart = () => {
+		gtag("event", "form_start", {
+			form_name: "Contact Me",
+		});
+	};
+
 	const clearMessage = () => {
 		if (!subjectRef.current) return;
 		if (!messageRef.current) return;
@@ -46,17 +52,19 @@ export default function ContactForm() {
 			setError("You must provide a message!");
 		}
 
+		gtag("event", "form_submit", { form_name: "Contact Me" });
 		setIsSending(true);
 		const successful = await sendMessage(subject, message);
 		setIsSending(false);
-		setJustSent(true);
+		clearMessage();
 
 		if (!successful) {
 			setError(
 				"An error occurred while sending the message. Please try again."
 			);
+			return;
 		}
-		clearMessage();
+		setJustSent(true);
 		setTimeout(() => setJustSent(false), SUCCESS_MESSAGE_TIMEOUT);
 	};
 
@@ -69,17 +77,17 @@ export default function ContactForm() {
 		: "Send";
 
 	return (
-		<form onChange={onFormChange} onSubmit={onSubmit}>
+		<form onFocus={onFormStart} onChange={onFormChange} onSubmit={onSubmit}>
 			<TextInput
 				ref={subjectRef}
-                rows={1}
+				rows={1}
 				id="subject"
 				label="Subject"
 				placeholder="Message subject"
 			/>
 			<TextInput
 				ref={messageRef}
-                rows={5}
+				rows={5}
 				id="message"
 				label="Body"
 				placeholder="Message body"

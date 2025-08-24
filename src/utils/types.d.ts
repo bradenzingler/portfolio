@@ -9,7 +9,7 @@ declare global {
 	 */
 	function gtag(
 		command: "event",
-		eventName: "click",
+		eventName: "click" | "form_start" | "form_submit",
 		config: {
             [key: string]: string;
 		}
