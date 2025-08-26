@@ -80,7 +80,7 @@
 
                 const urlParams = new URLSearchParams(window.location.search);
                 const ref = urlParams.get('ref');
-                if (ref) gtag('event', 'page_view', { ref });
+                if (ref) gtag('event', 'referral', { ref });
                 
                 window.addEventListener("beforeunload", () => {
                     const duration = Math.round((Date.now() - pageStartTime) / 1000);
