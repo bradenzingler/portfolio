@@ -4,12 +4,6 @@ export default function AboutMe() {
 		<section id="about-me">
 			<hr />
 			<p>
-				Computer and software engineer with 2+ years of experience
-				architecting and developing scalable serverless systems in the cloud,
-				optimizing CI/CD pipelines, and deploying infrastructure with
-				Terraform. Proven ability to reduce costs, improve performance,
-				and deliver reliable end-to-end systems. Interested in cloud
-				infrastructure, web development, and game development.
 			</p>
 		</section>
 	);

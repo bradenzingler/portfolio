@@ -9,7 +9,7 @@ export default function Header() {
 			<div id="info">
 				<h1>Braden Zingler</h1>
 				<h2>Software & Computer Engineer</h2>
-				<h3>Chicago | Seattle</h3>
+				<h3>Madison, WI</h3>
 			</div>
 			<Links />
 		</header>
