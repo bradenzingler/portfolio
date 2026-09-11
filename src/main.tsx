@@ -3,16 +3,11 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import NotFound from "./routes/NotFound.tsx";
-import Contact from "./routes/Contact.tsx";
 
 const routes = [
 	{
 		path: "/",
 		component: App,
-	},
-	{
-		path: "/contact",
-		component: Contact,
 	},
 ];
 
